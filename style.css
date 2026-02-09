@@ -1,0 +1,147 @@
+@charset "UTF-8";
+/* ----- Grundstil och layout för webbsidan ----- */
+
+html {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 16px;
+
+	/* Variabler för de färger som används */
+	--light: #fff;
+	--middle1: rgb(210, 237, 247);
+	--middle2: rgb(95, 203, 243);
+	--dark: #222;
+	--shadow: #999999;
+}
+
+body {
+	margin: 0 auto;
+	max-width: 900px;
+	min-height: 100vh;
+	background-color: var(--light);
+	display: flex;
+	flex-direction: column;
+
+}
+
+header {
+	grid-area: header;
+	margin-bottom: 0.6rem;
+}
+
+header h1 {
+	margin: 0;
+	padding: 0.6rem;
+}
+
+main {
+	flex-grow: 1;
+	padding: 0 0.6rem;
+}
+
+footer {
+	padding: 0 0.6rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+header,
+footer {
+	background-color: var(--middle1);
+}
+
+hr {
+	border-color: var(--dark);
+	margin: 20px 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+/* ----- Grundstil för input ----- */
+
+button {
+	background-color: var(--middle1);
+	border-radius: 0.6em;
+	font-size: 1em;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: var(--middle2);
+}
+
+button:disabled {
+	background-color: var(--light);
+}
+
+/* ----- Stil för spelet ----- */
+
+#board {
+	/* Element som omger de olika delarna i spelet. */
+	border-top: 1px solid #666;
+	border-bottom: 1px solid #666;
+	padding: 10px 0 0 0;
+}
+
+#letterButtons {
+	width: 54em;
+	max-width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+}
+
+#letterButtons button {
+	/* Knappar med bokstäver */
+	flex: 0 0 3em;
+	height: 2em;
+	font-size: 1.5em;
+}
+
+button {
+	cursor: pointer;
+}
+
+button:disabled {
+	cursor: not-allowed;
+}
+
+#boxes {
+	padding-top: 1em;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4em;
+}
+
+#boxes span {
+	/* Rutor för bokstäverna i ordet */
+	/* span-elementen ska läggas in i HTML-koden med JS-kod. */
+	/* Ett span-element per bokstav i ordet. */
+	display: inline-block;
+	background-color: #FFF;
+	border: 1px solid #666;
+	width: 2em;
+	height: 2em;
+	font-size: 1.5em;
+	/* Flex inom rutan, för att kunna centrera texten både horisontellt och vertikalt */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#boxes span.marked {
+	/* Klassen marked ska läggas in i elementet, då bokstaven läggs in. */
+	background-color: #FC6;
+}
+
+#hangman {
+	/* img-taggen för galgen och gubben */
+	display: block;
+}
+
+#message {
+	/* Element där meddelande skrivs i slutet av spelet */
+	margin-top: 1em;
+	font-size: 1.2em;
+}
