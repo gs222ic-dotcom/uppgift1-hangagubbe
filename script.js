@@ -63,13 +63,13 @@ let startTime; // Tid då spelet startas
 let previousWord = ""; // innan vald ord
 
 const hangmanImages = [
-  "Img/h0.png",
-  "Img/h1.png",
-  "Img/h2.png",
-  "Img/h3.png",
-  "Img/h4.png",
-  "Img/h5.png",
-  "Img/h6.png"
+  "img/h0.png",
+  "img/h1.png",
+  "img/h2.png",
+  "img/h3.png",
+  "img/h4.png",
+  "img/h5.png",
+  "img/h6.png"
 ];
 
 const maxAttempts = 6;
