@@ -63,7 +63,6 @@ let startTime; // Tid då spelet startas
 let previousWord = ""; // innan vald ord
 
 const hangmanImages = [
-  
   "img/h0.png",
   "img/h1.png",
   "img/h2.png",
@@ -194,6 +193,7 @@ for (let i= 0; i<boxElements.length; i++) {
 
 // sedan aktivera startknappen och inaktivera bokstavsknapparna
 function endGame (manHanged) {
+  hangmanImage.src = hangmanImages[guessNr];
   const endTime = Date.now ();
   const totalTime = Math.floor ((endTime-startTime)/ 1000);
   
